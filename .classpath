@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/extentreports-3.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/jcommander-1.60.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/jsoup-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/mongodb-driver-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/selenium-server-standalone-3.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/DigiTelecommunications/libs/testng-6.10.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

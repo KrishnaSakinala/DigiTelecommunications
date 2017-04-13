@@ -28,12 +28,12 @@ public class DataUsage extends BaseTest {
 		Assert.assertEquals(status.trim(), "Expired");
 		test.info("Status is Expired");
 		CommonMethods.click(Selector.file1Link);
-		Thread.sleep(2000);
+		CommonMethods.waitForElement(Selector.subscriptionExpiredErrorMessage);
 		String errorMessage = CommonMethods.getText(Selector.subscriptionExpiredErrorMessage);
 		Assert.assertEquals(errorMessage.trim(), "Subscription expired.");
 		test.info("Subscription expired message displayed");
 		CommonMethods.click(Selector.subscriptionExpiredCloseButton);
-		Thread.sleep(2000);
+		CommonMethods.waitForElementInvisible(Selector.subscriptionExpiredCloseButton);
 	}
 	
 	@AfterClass

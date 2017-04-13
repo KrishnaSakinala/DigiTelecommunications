@@ -16,10 +16,15 @@ import base.BaseTest;
 public class CommonMethods extends BaseTest 
 {
 	
-	public static void waitForElement(WebElement elementLocator, int timeInSec) 
+	public static void waitForElement(String locator) 
 	{
-	    WebDriverWait wait = new WebDriverWait(driver,timeInSec);
-	    wait.until(ExpectedConditions.visibilityOf(elementLocator));	    
+	    WebDriverWait wait = new WebDriverWait(driver,120);
+	    wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(locator))));	    
+	}
+	public static void waitForElementInvisible(String locator) 
+	{
+	    WebDriverWait wait = new WebDriverWait(driver,120);
+	    wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(locator))));	    
 	}
 	public static void waitForElements(List<WebElement> elementLocators, int timeInSec) 
 	{

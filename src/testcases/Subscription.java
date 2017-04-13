@@ -32,12 +32,12 @@ public class Subscription extends BaseTest {
 		for(int i=1; i<=6; i++)
 		{
 			CommonMethods.click(Selector.addSubscriptionButton);
-			Thread.sleep(2000);
+			CommonMethods.waitForElement(Selector.subscriberNameTextbox);
 			Random rand= new Random();
 			int number=rand.nextInt(10000);
 			CommonMethods.enter(Selector.subscriberNameTextbox,"Subscriber"+ number);
 			CommonMethods.click(Selector.submitButton);
-			Thread.sleep(2000);
+			CommonMethods.waitForElementInvisible(Selector.submitButton);
 			test.info("Added Subscription: "+i);
 		}
 		int finalSubscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
@@ -52,23 +52,24 @@ public class Subscription extends BaseTest {
 		test.info("Intial Subscription count: "+initialSubscriptionCount);
 		Assert.assertTrue(initialSubscriptionCount == 6);
 		CommonMethods.click(Selector.addSubscriptionButton);
-		Thread.sleep(2000);
+		CommonMethods.waitForElement(Selector.subscriptionExceedErrorMessage);
 		String errorMessage = CommonMethods.getText(Selector.subscriptionExceedErrorMessage);
 		Assert.assertEquals("Maximum subscriptions limit exceeded", errorMessage.trim());
 		test.info("Error displayed for 7th Subscription");
 		CommonMethods.click(Selector.subscriptionExceedCloseButton);
-		Thread.sleep(2000);
+		CommonMethods.waitForElementInvisible(Selector.subscriptionExceedCloseButton);
 	}
 	
 	@Test
 	public void activeDataUsageVerification() throws InterruptedException
 	{
 		test = extent.createTest("activeDataUsageVerification");
-		Thread.sleep(2000);
+		CommonMethods.waitForElement(Selector.subsriptionStatus);
 		String status = CommonMethods.getText(Selector.subsriptionStatus);
 		Assert.assertEquals(status.trim(), "Active");
 		test.info("Status is Active");
 		CommonMethods.click(Selector.file1Link);
+		CommonMethods.waitForElement(Selector.logoutButton);
 	}
 	
 	@AfterClass

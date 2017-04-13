@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="11510" started-at="2017-04-13T07:18:56Z" finished-at="2017-04-13T07:19:07Z">
+  <suite name="Suite" duration-ms="15481" started-at="2017-04-13T14:30:22Z" finished-at="2017-04-13T14:30:37Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="11510" started-at="2017-04-13T07:18:56Z" finished-at="2017-04-13T07:19:07Z">
+    <test name="Test" duration-ms="15481" started-at="2017-04-13T14:30:22Z" finished-at="2017-04-13T14:30:37Z">
       <class name="testcases.DataUsage">
-        <test-method status="PASS" signature="logIn()[pri:0, instance:testcases.DataUsage@1604f19]" name="logIn" is-config="true" duration-ms="144" started-at="2017-04-13T12:49:06Z" finished-at="2017-04-13T12:49:06Z">
+        <test-method status="PASS" signature="logIn()[pri:0, instance:testcases.DataUsage@1604f19]" name="logIn" is-config="true" duration-ms="200" started-at="2017-04-13T20:00:36Z" finished-at="2017-04-13T20:00:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="dataExpirationVerificaton()[pri:0, instance:testcases.DataUsage@1604f19]" name="dataExpirationVerificaton" duration-ms="1303" started-at="2017-04-13T12:49:06Z" finished-at="2017-04-13T12:49:07Z">
+        <test-method status="PASS" signature="dataExpirationVerificaton()[pri:0, instance:testcases.DataUsage@1604f19]" name="dataExpirationVerificaton" duration-ms="1486" started-at="2017-04-13T20:00:36Z" finished-at="2017-04-13T20:00:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataExpirationVerificaton -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.DataUsage@1604f19]" name="getResult" is-config="true" duration-ms="0" started-at="2017-04-13T12:49:07Z" finished-at="2017-04-13T12:49:07Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.DataUsage@1604f19]" name="getResult" is-config="true" duration-ms="1" started-at="2017-04-13T20:00:37Z" finished-at="2017-04-13T20:00:37Z">
           <params>
             <param index="0">
               <value>
@@ -26,13 +26,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.DataUsage@1604f19]" name="tearDown" is-config="true" duration-ms="47" started-at="2017-04-13T12:49:07Z" finished-at="2017-04-13T12:49:07Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.DataUsage@1604f19]" name="tearDown" is-config="true" duration-ms="42" started-at="2017-04-13T20:00:37Z" finished-at="2017-04-13T20:00:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.DataUsage -->
       <class name="testcases.Subscription">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:testcases.Subscription@193948d]" name="setUp" is-config="true" duration-ms="4542" started-at="2017-04-13T12:48:51Z" finished-at="2017-04-13T12:48:56Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:testcases.Subscription@193948d]" name="setUp" is-config="true" duration-ms="6190" started-at="2017-04-13T20:00:16Z" finished-at="2017-04-13T20:00:22Z">
           <params>
             <param index="0">
               <value>
@@ -43,15 +43,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="logIn()[pri:0, instance:testcases.Subscription@193948d]" name="logIn" is-config="true" duration-ms="332" started-at="2017-04-13T12:48:56Z" finished-at="2017-04-13T12:48:56Z">
+        <test-method status="PASS" signature="logIn()[pri:0, instance:testcases.Subscription@193948d]" name="logIn" is-config="true" duration-ms="465" started-at="2017-04-13T20:00:22Z" finished-at="2017-04-13T20:00:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="activeDataUsageVerification()[pri:0, instance:testcases.Subscription@193948d]" name="activeDataUsageVerification" duration-ms="314" started-at="2017-04-13T12:48:56Z" finished-at="2017-04-13T12:48:57Z">
+        <test-method status="PASS" signature="activeDataUsageVerification()[pri:0, instance:testcases.Subscription@193948d]" name="activeDataUsageVerification" duration-ms="3588" started-at="2017-04-13T20:00:22Z" finished-at="2017-04-13T20:00:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- activeDataUsageVerification -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.Subscription@193948d]" name="getResult" is-config="true" duration-ms="2" started-at="2017-04-13T12:48:57Z" finished-at="2017-04-13T12:48:57Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.Subscription@193948d]" name="getResult" is-config="true" duration-ms="3" started-at="2017-04-13T20:00:26Z" finished-at="2017-04-13T20:00:26Z">
           <params>
             <param index="0">
               <value>
@@ -62,11 +62,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="sixSubscriptionsVerification()[pri:0, instance:testcases.Subscription@193948d]" name="sixSubscriptionsVerification" duration-ms="7926" started-at="2017-04-13T12:48:57Z" finished-at="2017-04-13T12:49:05Z">
+        <test-method status="PASS" signature="sixSubscriptionsVerification()[pri:0, instance:testcases.Subscription@193948d]" name="sixSubscriptionsVerification" duration-ms="8181" started-at="2017-04-13T20:00:26Z" finished-at="2017-04-13T20:00:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sixSubscriptionsVerification -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.Subscription@193948d]" name="getResult" is-config="true" duration-ms="0" started-at="2017-04-13T12:49:05Z" finished-at="2017-04-13T12:49:05Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.Subscription@193948d]" name="getResult" is-config="true" duration-ms="1" started-at="2017-04-13T20:00:34Z" finished-at="2017-04-13T20:00:34Z">
           <params>
             <param index="0">
               <value>
@@ -77,11 +77,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="seventhSubscriptionVerification()[pri:0, instance:testcases.Subscription@193948d]" name="seventhSubscriptionVerification" duration-ms="1342" started-at="2017-04-13T12:49:05Z" depends-on-methods="testcases.Subscription.sixSubscriptionsVerification" finished-at="2017-04-13T12:49:06Z">
+        <test-method status="PASS" signature="seventhSubscriptionVerification()[pri:0, instance:testcases.Subscription@193948d]" name="seventhSubscriptionVerification" duration-ms="1357" started-at="2017-04-13T20:00:34Z" depends-on-methods="testcases.Subscription.sixSubscriptionsVerification" finished-at="2017-04-13T20:00:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seventhSubscriptionVerification -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.Subscription@193948d]" name="getResult" is-config="true" duration-ms="1" started-at="2017-04-13T12:49:06Z" finished-at="2017-04-13T12:49:06Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.Subscription@193948d]" name="tearDown" is-config="true" duration-ms="130" started-at="2017-04-13T20:00:36Z" finished-at="2017-04-13T20:00:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testcases.Subscription@193948d]" name="getResult" is-config="true" duration-ms="0" started-at="2017-04-13T20:00:36Z" finished-at="2017-04-13T20:00:36Z">
           <params>
             <param index="0">
               <value>
@@ -92,11 +96,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.Subscription@193948d]" name="tearDown" is-config="true" duration-ms="70" started-at="2017-04-13T12:49:06Z" finished-at="2017-04-13T12:49:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="reportClose()[pri:0, instance:testcases.Subscription@193948d]" name="reportClose" is-config="true" duration-ms="477" started-at="2017-04-13T12:49:07Z" finished-at="2017-04-13T12:49:08Z">
+        <test-method status="PASS" signature="reportClose()[pri:0, instance:testcases.Subscription@193948d]" name="reportClose" is-config="true" duration-ms="464" started-at="2017-04-13T20:00:37Z" finished-at="2017-04-13T20:00:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportClose -->

@@ -21,7 +21,7 @@ public class DataUsage extends BaseTest {
 	}
 	
 	@Test
-	public void dataExpirationVerificaton() throws InterruptedException
+	public void dataExpirationVerificaton()
 	{
 		test= extent.createTest("dataExpirationVerificaton");
 		String status = CommonMethods.getText(Selector.subsriptionStatus);

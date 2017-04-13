@@ -27,7 +27,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import config.ConstantsClass;
+import config.Constants;
 
 
 public  class BaseTest 
@@ -63,7 +63,7 @@ public  class BaseTest
 			}
 			driver.manage().window().maximize();
 			driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
-			driver.get(ConstantsClass.APP_URL);
+			driver.get(Constants.APP_URL);
 		}
 	}
 		
@@ -112,5 +112,17 @@ public  class BaseTest
 		Date date = new Date();
 		String currentDateTime = dateFormat.format(date);
 		return currentDateTime;
+	}
+	
+	public boolean fileExist()
+	{
+		File f = new File(Constants.FILE_PATH);
+		return f.exists();
+	}
+	
+	public void fileDelete()
+	{
+		File f = new File(Constants.FILE_PATH);
+		f.delete();
 	}
 }

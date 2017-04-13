@@ -23,7 +23,7 @@ public class Subscription extends BaseTest {
 	}
 	
 	@Test
-	public void sixSubscriptionsVerification() throws InterruptedException
+	public void sixSubscriptionsVerification()
 	{
 		test = extent.createTest("sixSubscriptionsVerification");
 		int initialSubscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
@@ -45,7 +45,7 @@ public class Subscription extends BaseTest {
 	}
 	
 	@Test(dependsOnMethods={"sixSubscriptionsVerification"})
-	public void seventhSubscriptionVerification() throws InterruptedException
+	public void seventhSubscriptionVerification()
 	{
 		test = extent.createTest("seventhSubscriptionVerification");
 		int initialSubscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
@@ -70,13 +70,15 @@ public class Subscription extends BaseTest {
 		test.info("Status is Active");
 		CommonMethods.click(Selector.file1Link);
 		CommonMethods.waitForElement(Selector.logoutButton);
+		Thread.sleep(3000);
+		Assert.assertTrue(fileExist());
+		test.info("File downloaded successfully");
 	}
 	
 	@AfterClass
 	public void tearDown()
 	{
 		CommonMethods.click(Selector.logoutButton);
+		fileDelete();
 	}
-	
-
 }

@@ -95,10 +95,6 @@ public class Subscription extends BaseTest {
 		}
 		finally
 		{
-			/*if(fileExist())
-			{
-				fileDelete();
-			}*/
 			fileDelete();
 		}
 	}
@@ -135,10 +131,6 @@ public class Subscription extends BaseTest {
 		}
 		finally
 		{
-			/*if(fileExist())
-			{
-				fileDelete();
-			}*/
 			fileDelete();
 		}
 	}
@@ -151,7 +143,6 @@ public class Subscription extends BaseTest {
 		for(int i=1; i<=subscriptionCount; i++)
 		{
 			CommonMethods.click(Selector.deleteSubscriber);
-			//CommonMethods.waitForElement(Selector.deleteSubscriber);
 			Thread.sleep(1000);
 		}
 		CommonMethods.click(Selector.resetButton);

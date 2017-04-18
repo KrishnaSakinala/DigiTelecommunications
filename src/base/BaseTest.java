@@ -45,6 +45,9 @@ public  class BaseTest
 		extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
 		
+        htmlReporter.config().setDocumentTitle("Digi Telecommunications Report");
+        htmlReporter.config().setReportName("Automation Status Report");
+        
 		extent.setSystemInfo("Host Name", "Automation User");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("User Name", "Selenium User");

@@ -41,7 +41,7 @@ public  class BaseTest
 	@Parameters("browser")
 	public void setUp(String browserName)
 	{
-		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/HTMLResultReport.html");
+		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/DigiTeleAutomationReport.html");
 		extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
 		

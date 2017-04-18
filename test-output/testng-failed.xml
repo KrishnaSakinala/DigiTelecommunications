@@ -15,11 +15,10 @@
         <methods>
           <include name="setUp"/>
           <include name="reportClose"/>
+          <include name="dataUsageVerification"/>
           <include name="tearDown"/>
           <include name="logIn"/>
-          <include name="seventhSubscriptionVerification"/>
           <include name="getResult"/>
-          <include name="sixSubscriptionsVerification"/>
         </methods>
       </class> <!-- testcases.Subscription -->
     </classes>

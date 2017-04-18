@@ -16,7 +16,7 @@ import base.BaseTest;
 public class CommonMethods extends BaseTest 
 {
 	
-	public static void waitForElement(String locator) 
+	public static void waitForElement(String locator)
 	{
 	    WebDriverWait wait = new WebDriverWait(driver,120);
 	    wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(locator))));	    

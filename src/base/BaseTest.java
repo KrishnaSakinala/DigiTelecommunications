@@ -123,6 +123,9 @@ public  class BaseTest
 	public void fileDelete()
 	{
 		File f = new File(Constants.FILE_PATH);
-		f.delete();
+		if(fileExist())
+		{
+			f.delete();
+		}
 	}
 }

@@ -2,6 +2,7 @@ package testcases;
 
 import java.util.Random;
 
+import org.apache.commons.lang3.time.StopWatch;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -25,7 +26,7 @@ public class Subscription extends BaseTest {
 	@Test
 	public void sixSubscriptionsVerification()
 	{
-		test = extent.createTest("sixSubscriptionsVerification");
+		test = extent.createTest("sixSubscriptionsVerification", "Able to add only 6 subscriptions");
 		int initialSubscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
 		test.info("Intial Subscription count: "+initialSubscriptionCount);
 		Assert.assertTrue(initialSubscriptionCount == 0);
@@ -47,7 +48,7 @@ public class Subscription extends BaseTest {
 	@Test(dependsOnMethods={"sixSubscriptionsVerification"})
 	public void seventhSubscriptionVerification()
 	{
-		test = extent.createTest("seventhSubscriptionVerification");
+		test = extent.createTest("seventhSubscriptionVerification", "Can not add 7th subscriber");
 		int initialSubscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
 		test.info("Intial Subscription count: "+initialSubscriptionCount);
 		Assert.assertTrue(initialSubscriptionCount == 6);
@@ -63,22 +64,97 @@ public class Subscription extends BaseTest {
 	@Test
 	public void activeDataUsageVerification() throws InterruptedException
 	{
-		test = extent.createTest("activeDataUsageVerification");
+		try
+		{
+		test = extent.createTest("activeDataUsageVerification", "Download speed within the usage limit");
+		
+		StopWatch stopWatch = new StopWatch();
+		
 		CommonMethods.waitForElement(Selector.subsriptionStatus);
 		String status = CommonMethods.getText(Selector.subsriptionStatus);
 		Assert.assertEquals(status.trim(), "Active");
 		test.info("Status is Active");
-		CommonMethods.click(Selector.file1Link);
+		
+		
+		stopWatch.start();
+		
+		CommonMethods.click(Selector.downloadLink);
 		CommonMethods.waitForElement(Selector.logoutButton);
-		Thread.sleep(3000);
+		
+		while(!fileExist())
+		{
+			Thread.sleep(300);
+		}
+		
+		stopWatch.stop();
+		
+		test.info("File download time is :"+ stopWatch.getTime()+" milli seconds");
+				
 		Assert.assertTrue(fileExist());
 		test.info("File downloaded successfully");
+		}
+		finally
+		{
+			/*if(fileExist())
+			{
+				fileDelete();
+			}*/
+			fileDelete();
+		}
 	}
 	
-	@AfterClass
-	public void tearDown()
+	@Test(dependsOnMethods={"activeDataUsageVerification"})
+	public void exceedDataUsageVerification() throws InterruptedException
 	{
+		try{
+		test = extent.createTest("exceedDataUsageVerification", "Download speed after usage limit");
+		
+		StopWatch stopWatch = new StopWatch();
+		
+		CommonMethods.waitForElement(Selector.subsriptionStatus);
+		String status = CommonMethods.getText(Selector.subsriptionStatus);
+		Assert.assertEquals(status.trim(), "Active");
+		test.info("Status is Active");
+			
+		stopWatch.start();
+		
+		CommonMethods.click(Selector.downloadLink);
+		CommonMethods.waitForElement(Selector.logoutButton);
+		
+		while(!fileExist())
+		{
+			Thread.sleep(300);
+		}
+		
+		stopWatch.stop();
+		
+		test.info("File download time is :"+ stopWatch.getTime()+ " milli seconds");
+		
+		Assert.assertTrue(fileExist());
+		test.info("File downloaded successfully");
+		}
+		finally
+		{
+			/*if(fileExist())
+			{
+				fileDelete();
+			}*/
+			fileDelete();
+		}
+	}
+		
+	
+	@AfterClass
+	public void tearDown() throws InterruptedException
+	{
+		int subscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
+		for(int i=1; i<=subscriptionCount; i++)
+		{
+			CommonMethods.click(Selector.deleteSubscriber);
+			//CommonMethods.waitForElement(Selector.deleteSubscriber);
+			Thread.sleep(1000);
+		}
+		CommonMethods.click(Selector.resetButton);
 		CommonMethods.click(Selector.logoutButton);
-		fileDelete();
 	}
 }

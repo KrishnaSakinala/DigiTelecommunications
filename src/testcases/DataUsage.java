@@ -23,11 +23,11 @@ public class DataUsage extends BaseTest {
 	@Test
 	public void dataExpirationVerificaton()
 	{
-		test= extent.createTest("dataExpirationVerificaton");
+		test= extent.createTest("dataExpirationVerificaton","Can not download for Inactive subscription");
 		String status = CommonMethods.getText(Selector.subsriptionStatus);
 		Assert.assertEquals(status.trim(), "Expired");
 		test.info("Status is Expired");
-		CommonMethods.click(Selector.file1Link);
+		CommonMethods.click(Selector.downloadLink);
 		CommonMethods.waitForElement(Selector.subscriptionExpiredErrorMessage);
 		String errorMessage = CommonMethods.getText(Selector.subscriptionExpiredErrorMessage);
 		Assert.assertEquals(errorMessage.trim(), "Subscription expired.");

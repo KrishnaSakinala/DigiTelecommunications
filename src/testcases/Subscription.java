@@ -88,7 +88,7 @@ public class Subscription extends BaseTest {
 		
 		stopWatch.stop();
 		
-		test.info("File download time is :"+ stopWatch.getTime()+" milli seconds");
+		test.info("File download time is : "+ stopWatch.getTime()+" milli seconds");
 				
 		Assert.assertTrue(fileExist());
 		test.info("File downloaded successfully");
@@ -128,7 +128,7 @@ public class Subscription extends BaseTest {
 		
 		stopWatch.stop();
 		
-		test.info("File download time is :"+ stopWatch.getTime()+ " milli seconds");
+		test.info("File download time is : "+ stopWatch.getTime()+ " milli seconds");
 		
 		Assert.assertTrue(fileExist());
 		test.info("File downloaded successfully");

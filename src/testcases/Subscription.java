@@ -24,7 +24,7 @@ public class Subscription extends BaseTest {
 	}
 	
 	@Test(priority=1)
-	public void subscriptionsVerification()
+	public void subscriptionsVerification() throws InterruptedException
 	{
 		test = extent.createTest("subscriptionsVerification", "Able to add only 6 subscriptions");
 		int initialSubscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
@@ -40,6 +40,7 @@ public class Subscription extends BaseTest {
 			CommonMethods.click(Selector.submitButton);
 			CommonMethods.waitForElementInvisible(Selector.submitButton);
 			test.info("Added Subscription: "+i);
+			Thread.sleep(1000);
 		}
 		int finalSubscriptionCount = Integer.parseInt(CommonMethods.getText(Selector.subscriptionCount));
 		Assert.assertTrue(finalSubscriptionCount == 6);
@@ -53,6 +54,7 @@ public class Subscription extends BaseTest {
 			test.info("Error displayed for Subscription: "+(i+1));
 			CommonMethods.click(Selector.subscriptionExceedCloseButton);
 			CommonMethods.waitForElementInvisible(Selector.subscriptionExceedCloseButton);
+			Thread.sleep(1000);
 		}
 		
 		

@@ -61,8 +61,6 @@ public class Subscription extends BaseTest {
 	@Test
 	public void dataUsageVerification() throws InterruptedException
 	{
-		try
-		{
 			test = extent.createTest("dataUsageVerification", "Download speed within the usage limit");
 			StopWatch stopWatch = null;
 			
@@ -91,13 +89,7 @@ public class Subscription extends BaseTest {
 				test.info("File downloaded successfully");
 				fileDelete();
 				}
-			}	
-						
-			finally
-			{
-				//fileDelete();
-			}
-	}
+		}
 	
 	@AfterClass
 	public void tearDown() throws InterruptedException

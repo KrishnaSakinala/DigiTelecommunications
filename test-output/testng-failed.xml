@@ -6,6 +6,7 @@
     <classes>
       <class name="testcases.DataUsage">
         <methods>
+          <include name="dataExpirationVerificaton"/>
           <include name="getResult"/>
           <include name="logIn"/>
           <include name="tearDown"/>
@@ -15,8 +16,8 @@
         <methods>
           <include name="setUp"/>
           <include name="reportClose"/>
-          <include name="dataUsageVerification"/>
           <include name="tearDown"/>
+          <include name="subscriptionsVerification"/>
           <include name="logIn"/>
           <include name="getResult"/>
         </methods>

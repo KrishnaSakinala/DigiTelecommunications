@@ -20,7 +20,7 @@ public class DataUsage extends BaseTest {
 		CommonMethods.click(Selector.singInButton);
 	}
 	
-	@Test
+	@Test(priority=3)
 	public void dataExpirationVerificaton()
 	{
 		test= extent.createTest("dataExpirationVerificaton","Can not download for Inactive subscription");

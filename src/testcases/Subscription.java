@@ -23,7 +23,7 @@ public class Subscription extends BaseTest {
 		CommonMethods.click(Selector.singInButton);
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void subscriptionsVerification()
 	{
 		test = extent.createTest("subscriptionsVerification", "Able to add only 6 subscriptions");
@@ -58,7 +58,7 @@ public class Subscription extends BaseTest {
 		
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void dataUsageVerification() throws InterruptedException
 	{
 			test = extent.createTest("dataUsageVerification", "Download speed within the usage limit");
